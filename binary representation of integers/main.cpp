@@ -11,19 +11,21 @@ using namespace std;
 
 int convertBinary(int num)
 {
-if (num==0)
- {
-    cout << "the binary representation is 0" << endl;
-    return 0;
-  }
+    if (num==0)
+    {
+        cout << "the binary representation is 0" << endl;
+        
+    }
     string binary="";
     
-    while (number>0)
+    while (num > 0)
     {
+        // divides num by 2 and adds remainder to string
         binary=to_string(num % 2)+binary;
-        num=num/2;
+        num=num/2; // keeps dividing num by 2
     }
     cout <<"the binary representation is "<< binary<<endl;
+    return 0;
 }
 
 int main()
@@ -38,6 +40,5 @@ int main()
         cout <<"you did not enter a positive number. please try again." <<endl;
         return 1;
     }
-    cout << covertBinary(num) <<endl;
-    return 0;
+    cout << convertBinary(num) <<endl;
 }
